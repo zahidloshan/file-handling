@@ -17,6 +17,14 @@
 			}
 			else {
 				$FirstName = $_POST['fname'];
+
+			   $filePath = "file.txt";
+				
+			   $f = fopen($filePath, "a");
+
+		       fwrite($f, $FirstName . " ");
+
+		       fclose($f);
 			}
 
 			if(empty($_POST['lname'])) {
@@ -25,6 +33,13 @@
 			else {
 
 				$LastName = $_POST['lname'];
+				$filePath = "file.txt";
+				
+			   $f1 = fopen($filePath, "a");
+
+		       fwrite($f1, $LastName . " ");
+
+		       fclose($f1);
 				
 			}
 
@@ -35,6 +50,14 @@
 			else {
 
 				$Email = $_POST['email'];
+
+				$filePath = "file.txt";
+				
+			   $f2 = fopen($filePath, "a");
+
+		       fwrite($f2, $Email . " ");
+
+		       fclose($f2);
 				
 			}
 
@@ -62,6 +85,13 @@
 			else {
 
 				$UserName = $_POST['uname'];
+				$filePath = "file.txt";
+				
+			   $f3 = fopen($filePath, "a");
+
+		       fwrite($f3, $UserName . " ");
+
+		       fclose($f3);
 				
 			}
 
@@ -71,6 +101,13 @@
 			else {
 
 				$Password = $_POST['pass'];
+				$filePath = "file.txt";
+				
+			   $f4= fopen($filePath, "a");
+
+		       fwrite($f4, $Password . " ");
+
+		       fclose($f4);
 				
 			}
 
@@ -81,22 +118,17 @@
 			else {
 
 				$RMail = $_POST['remail'];
+				$filePath = "file.txt";
+				
+			   $f5 = fopen($filePath, "a");
+
+		       fwrite($f5, $RMail . " " ."\n");
+
+		       fclose($f5);
 				
 			}
 
 			
-
-			if($FirstNameErr == "" && $LastNameErr == "" && $EmailErr == "" 
-				&& $UserErr==""&& $PassErr== "" &&$REmailErr= "") {
-
-			   $filePath = "file.txt";
-				
-			   $f = fopen($filePath, "a");
-
-		       fwrite($f, "$FirstName");
-
-		       fclose($f);
-			}
 		}
 	?>
 
